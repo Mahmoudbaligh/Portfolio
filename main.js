@@ -1,16 +1,24 @@
-const showMenu = (toggleId, navId) =>{
-}
-showMenu('nav-toggle','nav-menu')
+/=============== SHOW MENU ===============/
+const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle')
 
-/*==================== REMOVE MENU MOBILE ====================*/
+/* Menu show */
+if(navToggle){
+    navToggle.addEventListener('click', () =>{
+        navMenu.classList.toggle('show-menu')
+    })
+}
+
+/=============== REMOVE MENU MOBILE ===============/
+
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+const linkAction = () =>{
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show')
+    navMenu.classList.remove('show-menu')
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach(n => n.addEventListener('click', linkAction))
 /*==================== TEXT ANIMATION ====================*/
 const texts = [
     "FRONTEND DEVELOPER",
